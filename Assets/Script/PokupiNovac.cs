@@ -7,6 +7,8 @@ public class PokupiNovac : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private Transform igrac;
+    [SerializeField]
+    private GameObject zaKraj;
     void Start()
     {
         
@@ -20,6 +22,8 @@ public class PokupiNovac : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P))
             {
                 GameObject.Destroy(gameObject);
+                var Vec = new Vector3(130.41f, 0.23f, 129.3f);
+                Instantiate(zaKraj, Vec, Quaternion.identity);
             }
            
         }
