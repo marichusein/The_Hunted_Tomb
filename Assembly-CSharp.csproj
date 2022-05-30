@@ -60,6 +60,7 @@
      <Compile Include="Assets\Script\ShopItemSO.cs" />
      <Compile Include="Assets\Script\PokupiNovcic.cs" />
      <Compile Include="Assets\Mummy\C#\Sword_Shield.cs" />
+     <Compile Include="Assets\Script\PokreniLevel.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature6_v1.0\Script\THC6_ctrl.cs" />
      <Compile Include="Assets\Script\PlayerMovement.cs" />
      <Compile Include="Assets\Mummy\C#\MainController.cs" />
@@ -74,7 +75,6 @@
      <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\GenerisStubove.cs" />
      <Compile Include="Assets\Mummy\C#\Axe.cs" />
-     <Compile Include="Assets\Script\PokreniLevel.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

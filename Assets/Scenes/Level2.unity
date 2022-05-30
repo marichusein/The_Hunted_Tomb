@@ -223,7 +223,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11902
+  m_Name: pb_Mesh19886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18133,17 +18133,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 103558802}
   m_IsSelectable: 1
-  m_SelectedFaces: 28020000
-  m_SelectedEdges:
-  - a: 2208
-    b: 2209
-  - a: 2210
-    b: 2208
-  - a: 2209
-    b: 2211
-  - a: 2211
-    b: 2210
-  m_SelectedVertices: a0080000a1080000a2080000a3080000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!1 &981186618
 GameObject:
   m_ObjectHideFlags: 0
@@ -19927,7 +19919,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -20127,7 +20119,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11904
+  m_Name: pb_Mesh19906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

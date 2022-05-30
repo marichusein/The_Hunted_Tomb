@@ -73,10 +73,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 722.8
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 115
+  controlID: 28
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 116
+  controlID: 29
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 117
+  controlID: 30
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -520,36 +520,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Cartoon Temple Building Kit/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Cartoon Temple Building Kit/Scenes
   m_LastFoldersGridSize: 53
   m_LastProjectPath: C:\Users\husei\Desktop\The_Hunted_Tomb
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e4d0000
-    m_LastClickedID: 19774
-    m_ExpandedIDs: 000000000e4d0000104d0000124d0000144d0000164d0000184d00001a4d00001c4d00001e4d0000204d0000224d0000244d0000264d0000284d00002a4d00002c4d000000ca9a3b
+    scrollPos: {x: 0, y: 830.09985}
+    m_SelectedIDs: 2e590000
+    m_LastClickedID: 22830
+    m_ExpandedIDs: 000000001e4d0000204d0000224d0000244d0000264d0000284d00002a4d00002c4d00002e4d0000304d0000324d0000344d0000364d0000384d00003a4d00003c4d00005c4d00006a4d0000f44d00002e59000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Example Scene 1
+      m_OriginalName: Example Scene 1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 22844
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -563,7 +563,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e4d0000104d0000124d0000144d0000164d0000184d00001a4d00001c4d00001e4d0000204d0000224d0000244d0000264d0000284d00002a4d00002c4d0000
+    m_ExpandedIDs: 000000001e4d0000204d0000224d0000244d0000264d0000284d00002a4d00002c4d00002e4d0000304d0000324d0000344d0000364d0000384d00003a4d00003c4d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 28
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -684,9 +684,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6e61ffff2863ffffd676ffff9877ffff6283ffffe69dffffdca4ffff2caaffff6ab7ffff00d2fffff8ddffff86deffffd8e1ffffbaedffff54eeffff68fbffff6a6f0000688300000cad0000fe1b0100
+      m_SelectedIDs: 5edc0000
+      m_LastClickedID: 56414
+      m_ExpandedIDs: 9e89ffffb895ffff8c9dffff90a9ffff0eaeffff8cb2ffff86beffffc8c3ffffd8cdffffd2d7ffff0adfffff36e6ffffd8e8fffffee9ffff00efffff68fbffff944d0000de4d000070970000d6b70000d6da00005edc0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -702,7 +702,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 2}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -746,9 +746,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 106.253296, y: 3.4710383, z: 91.30992}
+    m_Target: {x: -83.31433, y: 10.55712, z: -15.059145}
     speed: 2
-    m_Value: {x: 106.253296, y: 3.4710383, z: 91.30992}
+    m_Value: {x: -83.31433, y: 10.55712, z: -15.059145}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -795,13 +795,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22366649, y: 0.12248788, z: 0.028237566, w: -0.9665587}
+    m_Target: {x: -0.18134773, y: 0.31389734, z: -0.06130305, w: -0.9299973}
     speed: 2
-    m_Value: {x: 0.22365946, y: 0.12248403, z: 0.028236678, w: -0.9665283}
+    m_Value: {x: -0.18134125, y: 0.3138861, z: -0.06130086, w: -0.92996407}
   m_Size:
-    m_Target: 1.4696013
+    m_Target: 16.90515
     speed: 2
-    m_Value: 1.4696013
+    m_Value: 16.90515
   m_Ortho:
     m_Target: 0
     speed: 2
