@@ -34605,10 +34605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35c390e621a6ee4585456136a806fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zdravlje: 20
+  coins: 0
   moveSpeed: 0
   walkSpeed: 5
   runSpeed: 20
-  zdravlje: 20
   isGrounded: 0
   groundCheckDistance: 0.2
   groundMask:
@@ -48482,7 +48483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee7424d402181142a73aa9b1c62e430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igrac: {fileID: 913452802}
+  igrac: {fileID: 711640054}
 --- !u!114 &1136571983
 MonoBehaviour:
   m_ObjectHideFlags: 0

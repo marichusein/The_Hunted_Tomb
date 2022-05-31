@@ -9,9 +9,11 @@ public class PokupiNovac : MonoBehaviour
     private Transform igrac;
     [SerializeField]
     private GameObject zaKraj;
+
+    private PlayerMovement _playerMovement;
     void Start()
     {
-        
+        _playerMovement = new PlayerMovement();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class PokupiNovac : MonoBehaviour
                 GameObject.Destroy(gameObject);
                 var Vec = new Vector3(130.41f, 0.23f, 129.3f);
                 Instantiate(zaKraj, Vec, Quaternion.identity);
+                _playerMovement.coins += 100;
             }
            
         }

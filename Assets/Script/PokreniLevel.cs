@@ -15,7 +15,7 @@ public class PokreniLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider igrac)
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Shop");
         
     }
 
@@ -24,7 +24,7 @@ public class PokreniLevel : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, igrac.position) < 1.3f)
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Shop");
         }
     }
 }

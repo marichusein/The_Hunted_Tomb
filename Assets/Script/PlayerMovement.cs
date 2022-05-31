@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : BaznaKlasa
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-    public int zdravlje = 5;
+   // public int zdravlje = 5;
+    //public int coins=0;
     
 
     private Vector3 moveDirection;

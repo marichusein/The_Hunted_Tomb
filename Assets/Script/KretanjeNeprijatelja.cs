@@ -73,6 +73,7 @@ public class KretanjeNeprijatelja : MonoBehaviour
                     an.SetTrigger("Damage");
                     if (zdravlje == 0)
                     {
+                        
                         an.SetTrigger("Smrt");
                         Instantiate(coin, transform.position+(Vector3.up*1.5f), Quaternion.identity);
                         // GameObject.Destroy(gameObject);
