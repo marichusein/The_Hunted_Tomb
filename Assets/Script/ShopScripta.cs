@@ -5,19 +5,21 @@ using  TMPro;
 
 public class ShopScripta : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
+    
     public int coins;
     public TMP_Text coinsUI;
+
+    private PlayerMovement p;
     // Start is called before the first frame update
     void Start()
     {
-        playerMovement = new PlayerMovement();
+        p = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        coinsUI.text = "Coins " + playerMovement.coins.ToString();
+        coinsUI.text = "Coins " + p.coins.ToString();
 
     }
 }

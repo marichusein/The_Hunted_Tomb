@@ -9,20 +9,28 @@ public class Pokupi_Coins : MonoBehaviour
     private PlayerMovement _playerMovement;
     void Start()
     {
-        _playerMovement = new PlayerMovement();
+        _playerMovement = igrac.GetComponent<PlayerMovement>();
     }
-
+    private void OnTriggerEnter(Collider coins)
+    {
+        _playerMovement.coins += 10;
+        GameObject.Destroy(gameObject);
+        
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(igrac.transform.position, transform.position) < 2)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _playerMovement.coins += 10;
-                GameObject.Destroy(gameObject);
-            }
-        }
+        
+        // if (Vector3.Distance(igrac.transform.position, transform.position) < 2)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Space))
+        //     {
+        //         _playerMovement.coins += 10;
+        //         GameObject.Destroy(gameObject);
+        //     }
+        // }
    
+        
+        
     }
 }

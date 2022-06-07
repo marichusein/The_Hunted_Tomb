@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class PokreniLevel : MonoBehaviour
 {
+    [SerializeField] private GameObject igracFUll;
     [SerializeField]
     private Transform igrac;
+
+    [SerializeField] private Scene Scena;
     void Start()
     {
         
@@ -15,8 +18,9 @@ public class PokreniLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider igrac)
     {
-        SceneManager.LoadScene("Shop");
-        
+        SceneManager.MoveGameObjectToScene(igracFUll, SceneManager.GetSceneByPath("Scenes/Level2"));
+        SceneManager.LoadScene("Scenes/Shop");
+      
     }
 
     // Update is called once per frame

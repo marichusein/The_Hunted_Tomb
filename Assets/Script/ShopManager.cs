@@ -9,7 +9,8 @@ public class ShopManager : MonoBehaviour
 {
     public int coins;
     public TMP_Text coinsUI;
-
+    
+    
     private void Start()
     {
         coinsUI.text = "Coins: " + coins.ToString();

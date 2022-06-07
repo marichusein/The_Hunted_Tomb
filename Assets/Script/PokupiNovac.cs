@@ -5,21 +5,22 @@ using UnityEngine;
 public class PokupiNovac : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    private Transform igrac;
-    [SerializeField]
-    private GameObject zaKraj;
+    [SerializeField] private GameObject igracsve;
+    [SerializeField] private Transform igrac;
+    [SerializeField] private GameObject zaKraj;
 
     private PlayerMovement _playerMovement;
+
     void Start()
     {
-        _playerMovement = new PlayerMovement();
-    }
+        _playerMovement = igracsve.GetComponent<PlayerMovement>();
 
-    // Update is called once per frame
+        // Update is called once per frame
+        
+    }
     void Update()
     {
-        if(Vector3.Distance(transform.position, igrac.position) < 2.5f)
+        if (Vector3.Distance(transform.position, igrac.position) < 2.5f)
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
@@ -28,8 +29,8 @@ public class PokupiNovac : MonoBehaviour
                 Instantiate(zaKraj, Vec, Quaternion.identity);
                 _playerMovement.coins += 100;
             }
-           
+
         }
-        
+
     }
 }
