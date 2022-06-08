@@ -18,7 +18,8 @@ public class PokreniLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider igrac)
     {
-        SceneManager.MoveGameObjectToScene(igracFUll, SceneManager.GetSceneByPath("Scenes/Level2"));
+        var nScena = SceneManager.GetSceneAt(1);
+        SceneManager.MoveGameObjectToScene(igracFUll, nScena);
         SceneManager.LoadScene("Scenes/Shop");
       
     }

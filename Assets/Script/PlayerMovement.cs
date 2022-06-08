@@ -23,12 +23,18 @@ public class PlayerMovement : BaznaKlasa
 
     private CharacterController controller;
     public Animator anim;
-    
+
+    [SerializeField] private GameObject shop;
+    [SerializeField] private GameObject scena;
+    public bool prikaz;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
+        prikaz = false;
+        shop.SetActive(prikaz);
+        scena.SetActive(!prikaz);
     }
 
     private void Update()
@@ -41,6 +47,13 @@ public class PlayerMovement : BaznaKlasa
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             StartCoroutine(Attack());
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            prikaz = !prikaz;
+            shop.SetActive(prikaz);
+            scena.SetActive(!prikaz);
         }
     }
 
