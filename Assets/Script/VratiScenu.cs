@@ -17,6 +17,7 @@ public class VratiScenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
+            Cursor.lockState = CursorLockMode.Locked;
             scena.SetActive(true);
             shop.SetActive(false);
         }

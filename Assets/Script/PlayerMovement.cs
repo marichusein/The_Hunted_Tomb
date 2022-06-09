@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class PlayerMovement : BaznaKlasa
 {
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float walkSpeed;
-    [SerializeField] private float runSpeed;
+    [SerializeField] public float moveSpeed;
+    [SerializeField] public float walkSpeed;
+    [SerializeField] public float runSpeed;
    // public int zdravlje = 5;
     //public int coins=0;
-    
+    [SerializeField] private AudioSource mac;
+    [SerializeField] private AudioSource kretanje;
+
+    [SerializeField] private AudioClip mac2;
+    [SerializeField] private AudioClip hodanje;
+    [SerializeField] private AudioClip trcanje;
+
+    private int brojac = 20;
+    public int udarac = 1;
+    public bool shopOtvoren = false;
 
     private Vector3 moveDirection;
     private Vector3 velocity;
@@ -51,14 +60,18 @@ public class PlayerMovement : BaznaKlasa
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            prikaz = !prikaz;
-            shop.SetActive(prikaz);
-            scena.SetActive(!prikaz);
+            Cursor.lockState = CursorLockMode.None;
+            shop.SetActive(true);
+            scena.SetActive(false);
+            shopOtvoren = true;
+
         }
     }
 
     private void Move()
     {
+        Console.WriteLine(brojac);
+
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -100,20 +113,44 @@ public class PlayerMovement : BaznaKlasa
 
     private void Idle()
     {
+        if (brojac <= 20)
+        {
+            brojac+=2;
+        }
         anim.SetFloat("Speed",0,0.1f,Time.deltaTime);
         
     }
     
     private void Walk()
     {
+        if (brojac <= 20)
+        {
+            brojac++;
+        }
         moveSpeed = walkSpeed;
         anim.SetFloat("Speed",0.5f,0.1f,Time.deltaTime);
+        Console.WriteLine(brojac);
+        if (!kretanje.isPlaying)
+        {
+            kretanje.PlayOneShot(hodanje, 0.2f);
+        }
+
     }
     
     private void Run()
     {
-        moveSpeed = runSpeed;
-        anim.SetFloat("Speed",1,0.1f,Time.deltaTime);
+        Console.WriteLine(brojac);
+
+        if (brojac > 0)
+        {
+            moveSpeed = runSpeed;
+            anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+            brojac--;
+        }
+        if (!kretanje.isPlaying)
+        {
+            kretanje.PlayOneShot(trcanje, 0.2f);
+        }
 
     }
     
@@ -127,7 +164,7 @@ public class PlayerMovement : BaznaKlasa
     {
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"),1);
         anim.SetTrigger("Attack");
-
+        mac.PlayOneShot(mac2);
         yield return new WaitForSeconds(0.9f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"),0);
 

@@ -15,7 +15,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         
-        pi = igracSve.GetComponent<PlayerMovement>();
+        //pi = igracSve.GetComponent<PlayerMovement>();
         coinsUI.text = "Coins: " + coins.ToString();
         
     }
