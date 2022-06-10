@@ -11,10 +11,16 @@ public class KretanjeNeprijatelja : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField]  GameObject igrac;
     [SerializeField] private GameObject coin;
-    private bool napravljenNovcic = false;
-    private bool jelumrla = false;
+
     [SerializeField] private AudioSource mumija;
-    [SerializeField] private AudioClip zvuk;
+    
+    [SerializeField] private AudioClip kretanje;
+    [SerializeField] private AudioClip udarac;
+    [SerializeField] private AudioClip smrt;
+
+
+    
+
 
  [SerializeField]  
  private Transform player;
@@ -42,36 +48,20 @@ public class KretanjeNeprijatelja : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (zdravlje <= 0)
-        {
-            if (!jelumrla)
-            {
-                an.SetTrigger("Smrt");
-            }
-
-            if (!napravljenNovcic)
-            {
-                Instantiate(coin, transform.position + (Vector3.up * 1.5f), Quaternion.identity);
-            }
-            napravljenNovcic = true;
-            jelumrla = true;
-           GameObject.Destroy(gameObject, 7f);
-
-        }
-        if (zdravlje > 0)
+        if (zdravlje != 0)
         {
             transform.LookAt(player);
 
             agent.SetDestination(player.position);
             an.SetFloat("Speed", 0);
-            
+
             if (Vector3.Distance(transform.position, player.position) < enemyDistance*10.2f)
             {
                 an.SetFloat("Speed", 1);
+
                 if (!mumija.isPlaying)
                 {
-                    mumija.PlayOneShot(zvuk,0.1f);
+                    mumija.PlayOneShot(kretanje);
                 }
             }
             if (Vector3.Distance(transform.position, player.position) < enemyDistance)
@@ -79,7 +69,12 @@ public class KretanjeNeprijatelja : MonoBehaviour
                 gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = Vector3.zero;
                 an.SetTrigger("Attack");
                 playerMovement.anim.SetTrigger("Udarac");
-               
+                
+                if (!mumija.isPlaying)
+                {
+                    mumija.PlayOneShot(udarac);
+                }
+
                 playerMovement.zdravlje--;
                 if (playerMovement.zdravlje == 0)
                 {
@@ -94,9 +89,19 @@ public class KretanjeNeprijatelja : MonoBehaviour
                     gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = Vector3.zero;
                     zdravlje = zdravlje - playerMovement.udarac;
                     an.SetTrigger("Damage");
-
-                    
+                    if (zdravlje == 0)
+                    {
                         
+                        an.SetTrigger("Smrt");
+                        Instantiate(coin, transform.position+(Vector3.up*1.5f), Quaternion.identity);
+                        mumija.Stop();
+                        if (!mumija.isPlaying)
+                        {
+                            mumija.PlayOneShot(smrt);
+                        }
+                        GameObject.Destroy(gameObject,5f);
+
+                    }
                    
                 }
             }
@@ -109,7 +114,4 @@ public class KretanjeNeprijatelja : MonoBehaviour
        
        
     }
-
-    
-    
 }

@@ -8,18 +8,20 @@ public class PlayerMovement : BaznaKlasa
     [SerializeField] public float moveSpeed;
     [SerializeField] public float walkSpeed;
     [SerializeField] public float runSpeed;
-   // public int zdravlje = 5;
-    //public int coins=0;
-    [SerializeField] private AudioSource mac;
-    [SerializeField] private AudioSource kretanje;
+    public int udarac=1;
 
-    [SerializeField] private AudioClip mac2;
+    [SerializeField] private AudioSource igrac1;
+    [SerializeField] private AudioSource igrac2;
+    
+    [SerializeField] private AudioClip mac;
     [SerializeField] private AudioClip hodanje;
     [SerializeField] private AudioClip trcanje;
 
-    private int brojac = 20;
-    public int udarac = 1;
-    public bool shopOtvoren = false;
+
+
+   // public int zdravlje = 5;
+    //public int coins=0;
+    
 
     private Vector3 moveDirection;
     private Vector3 velocity;
@@ -56,6 +58,7 @@ public class PlayerMovement : BaznaKlasa
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             StartCoroutine(Attack());
+            
         }
 
         if (Input.GetKeyDown(KeyCode.U))
@@ -63,15 +66,11 @@ public class PlayerMovement : BaznaKlasa
             Cursor.lockState = CursorLockMode.None;
             shop.SetActive(true);
             scena.SetActive(false);
-            shopOtvoren = true;
-
         }
     }
 
     private void Move()
     {
-        Console.WriteLine(brojac);
-
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -113,43 +112,27 @@ public class PlayerMovement : BaznaKlasa
 
     private void Idle()
     {
-        if (brojac <= 20)
-        {
-            brojac+=2;
-        }
         anim.SetFloat("Speed",0,0.1f,Time.deltaTime);
-        
+         igrac1.Stop();
     }
     
     private void Walk()
     {
-        if (brojac <= 20)
-        {
-            brojac++;
-        }
         moveSpeed = walkSpeed;
         anim.SetFloat("Speed",0.5f,0.1f,Time.deltaTime);
-        Console.WriteLine(brojac);
-        if (!kretanje.isPlaying)
+        if (!igrac1.isPlaying)
         {
-            kretanje.PlayOneShot(hodanje, 0.2f);
+            igrac1.PlayOneShot(hodanje,0.5f);
         }
-
     }
     
     private void Run()
     {
-        Console.WriteLine(brojac);
-
-        if (brojac > 0)
+        moveSpeed = runSpeed;
+        anim.SetFloat("Speed",1,0.1f,Time.deltaTime);
+        if (!igrac1.isPlaying)
         {
-            moveSpeed = runSpeed;
-            anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
-            brojac--;
-        }
-        if (!kretanje.isPlaying)
-        {
-            kretanje.PlayOneShot(trcanje, 0.2f);
+            igrac1.PlayOneShot(trcanje,0.3f);
         }
 
     }
@@ -164,9 +147,13 @@ public class PlayerMovement : BaznaKlasa
     {
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"),1);
         anim.SetTrigger("Attack");
-        mac.PlayOneShot(mac2);
+        if (!igrac2.isPlaying)
+        {
+            igrac2.PlayOneShot(mac,0.2f);
+        }
+
         yield return new WaitForSeconds(0.9f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"),0);
-
+      
     }
 }

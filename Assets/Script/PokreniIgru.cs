@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,21 +7,16 @@ using UnityEngine.UI;
 
 public class PokreniIgru : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private Button b;
-    void Start()
+    [SerializeField] private Button pocetak;
+
+   
+     private void Start()
     {
-        b.onClick.AddListener(Pokreni);
+        pocetak.onClick.AddListener(PokreniScenu);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Pokreni()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
+     void PokreniScenu()
+     {
+         SceneManager.LoadScene("SampleScene");
+     }
 }

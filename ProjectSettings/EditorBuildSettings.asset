@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Pocetna.unity
+    guid: 2aa35a912ec245b4a9bc70eb2223cb69
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -17,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 7fccf7736577cb74e9931e639a788e79
-  - enabled: 1
-    path: Assets/Scenes/START.unity
-    guid: b655de1cf4074464d84e4a049d178a07
   m_configObjects: {}
