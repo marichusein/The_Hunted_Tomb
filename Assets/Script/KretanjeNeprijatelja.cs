@@ -85,8 +85,8 @@ public class KretanjeNeprijatelja : MonoBehaviour
                 {
                     an.SetFloat("Speed", 0);
                     playerMovement.anim.SetTrigger("Smrt");
-                    StartCoroutine(ChangeAfter2SecondsCoroutine());
-                   //SceneManager.LoadScene("EndGame");
+                    //StartCoroutine(ChangeAfter2SecondsCoroutine());
+                   SceneManager.LoadScene("EndGame");
 
                 }
                 //gameObject.GetComponent<Animator>().Play("attack");
@@ -96,7 +96,7 @@ public class KretanjeNeprijatelja : MonoBehaviour
                     gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = Vector3.zero;
                     zdravlje = zdravlje - playerMovement.udarac;
                     an.SetTrigger("Damage");
-                    if (zdravlje == 0)
+                    if (zdravlje <= 0)
                     {
                         
                         an.SetTrigger("Smrt");
