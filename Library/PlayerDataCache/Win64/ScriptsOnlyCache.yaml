@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - DodajSoundNaPocetnu
     - KretanjeNeprijatelja
     - KupiBrzinu
     - KupiPaket
@@ -72,17 +73,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 3252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -130,6 +131,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -141,9 +144,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3198}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 5064}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -153,6 +156,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -173,6 +180,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -180,27 +193,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2238}
+      Script: {instanceID: 2244}
     - Class: 114
-      Script: {instanceID: 2248}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3378}
     - Class: 114
-      Script: {instanceID: 4668}
+      Script: {instanceID: 4676}
     - Class: 114
-      Script: {instanceID: 5012}
+      Script: {instanceID: 5020}
+    - Class: 114
+      Script: {instanceID: 20556}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -267,65 +282,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2054}
+      Script: {instanceID: 2060}
     - Class: 114
-      Script: {instanceID: 2068}
+      Script: {instanceID: 2074}
     - Class: 114
-      Script: {instanceID: 2248}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2352}
+      Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2632}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2652}
+      Script: {instanceID: 2658}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 3054}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3082}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 3198}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3384}
+      Script: {instanceID: 3378}
     - Class: 114
-      Script: {instanceID: 3542}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3586}
+      Script: {instanceID: 3550}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 3594}
     - Class: 114
-      Script: {instanceID: 3732}
+      Script: {instanceID: 3686}
     - Class: 114
-      Script: {instanceID: 3960}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4540}
+      Script: {instanceID: 4448}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4548}
     - Class: 114
-      Script: {instanceID: 5054}
+      Script: {instanceID: 4904}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5310}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 55446}
+      Script: {instanceID: 5318}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -373,6 +388,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -380,33 +397,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2248}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3378}
     - Class: 114
-      Script: {instanceID: 3384}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3586}
+      Script: {instanceID: 3594}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 4448}
     - Class: 114
-      Script: {instanceID: 4540}
+      Script: {instanceID: 4548}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4904}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -760,6 +777,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: 6bbe59d60c5bc1117808634d190045a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZdravljeBroj
   - hash:
       serializedVersion: 2
       Hash: d6a8e9bec3160a152b9b2710593d3caa
@@ -1398,10 +1421,10 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
-      Hash: 6bbe59d60c5bc1117808634d190045a0
+      Hash: 1540ff038fb4ec08e5055b3fcb1f15b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ZdravljeBroj
+    className: DodajSoundNaPocetnu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Pocetna.unity
@@ -1409,4 +1432,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Shop.unity
   - Assets/Scenes/EndGame.unity
   - Assets/Scenes/Level2.unity
-  playerPath: C:/Users/husei/Desktop/GAME/The_Hunted_Tomb.exe
+  playerPath: C:/Users/Amina/Desktop/igra/The_Hunted_Tomb.exe
