@@ -10,26 +10,22 @@ public class PokreniLevel : MonoBehaviour
     [SerializeField]
     private Transform igrac;
 
+    private PlayerMovement p;
     [SerializeField] private Scene Scena;
     void Start()
     {
+        p = igracFUll.GetComponent<PlayerMovement>();
         
     }
 
     private void OnTriggerEnter(Collider igrac)
     {
-        var nScena = SceneManager.GetSceneAt(1);
-        SceneManager.MoveGameObjectToScene(igracFUll, nScena);
-        SceneManager.LoadScene("Scenes/Shop");
-      
+        SceneManager.LoadScene("Scenes/Level2");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, igrac.position) < 1.3f)
-        {
-            SceneManager.LoadScene("Shop");
-        }
+        
     }
 }

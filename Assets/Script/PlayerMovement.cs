@@ -19,7 +19,7 @@ public class PlayerMovement : BaznaKlasa
 
 
 
-   // public int zdravlje = 5;
+   //public int zdravlje = 5000;
     //public int coins=0;
     
 
@@ -35,8 +35,10 @@ public class PlayerMovement : BaznaKlasa
     private CharacterController controller;
     public Animator anim;
 
-    [SerializeField] private GameObject shop;
-    [SerializeField] private GameObject scena;
+    [SerializeField] public GameObject shop;
+    [SerializeField] public GameObject scena;
+    //[SerializeField] public GameObject lvl2;
+
     public bool prikaz;
 
     private void Start()
@@ -46,6 +48,7 @@ public class PlayerMovement : BaznaKlasa
         prikaz = false;
         shop.SetActive(prikaz);
         scena.SetActive(!prikaz);
+        //lvl2.SetActive(false);
     }
 
     private void Update()

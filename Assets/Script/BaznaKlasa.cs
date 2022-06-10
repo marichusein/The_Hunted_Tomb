@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class BaznaKlasa : MonoBehaviour
 {
-    public int zdravlje = 100;
+    public int zdravlje = 100000;
     public int coins = 0;
 }

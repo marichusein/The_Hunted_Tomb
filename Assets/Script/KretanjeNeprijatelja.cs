@@ -75,11 +75,18 @@ public class KretanjeNeprijatelja : MonoBehaviour
                     mumija.PlayOneShot(udarac);
                 }
 
-                playerMovement.zdravlje--;
-                if (playerMovement.zdravlje == 0)
+                if (an.hasBoundPlayables)
                 {
-                    //playerMovement.anim.SetTrigger("Smrt");
-                  //  SceneManager.LoadScene("EndGame");
+                    playerMovement.zdravlje--;
+                }
+
+
+                if (playerMovement.zdravlje <= 0)
+                {
+                    an.SetFloat("Speed", 0);
+                    playerMovement.anim.SetTrigger("Smrt");
+                    StartCoroutine(ChangeAfter2SecondsCoroutine());
+                   //SceneManager.LoadScene("EndGame");
 
                 }
                 //gameObject.GetComponent<Animator>().Play("attack");
@@ -111,7 +118,13 @@ public class KretanjeNeprijatelja : MonoBehaviour
             agent.SetDestination(transform.position);
         }
         
-       
+        IEnumerator ChangeAfter2SecondsCoroutine()
+        {
+            
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene("EndGame");  
+        }
        
     }
 }
